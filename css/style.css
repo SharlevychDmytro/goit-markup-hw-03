@@ -13,6 +13,7 @@
   --button-second-text-color: #ffffff;
   --button-first-text-color: #212121;
   --background-color: #2f303a;
+  --card-set-gap: 30px;
 }
 
 body {
@@ -149,6 +150,8 @@ img {
 
 .hero {
   background-color: var(--background-color);
+  padding-top: 200px;
+  padding-bottom: 280px;
 }
 
 .hero-title {
@@ -159,6 +162,9 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--mine-title-color);
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -174,9 +180,24 @@ img {
   background-color: var(--button-color);
   border-radius: 4px;
   border-style: none;
+  margin: 0 auto;
 }
 
 /*-----------QALITY-----------*/
+
+.quality {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.quality-list {
+  display: flex;
+}
+
+.quality-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .quality-title {
   font-weight: 700;
   font-size: 14px;
@@ -184,6 +205,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--third-title-color);
+  margin-bottom: 10px;
 }
 
 .quality-text {
@@ -196,6 +218,23 @@ img {
 
 /*-----------WORKS-----------*/
 
+.works {
+  padding-bottom: 94px;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.works-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+}
+
 .works-title {
   font-weight: 700;
   font-size: 36px;
@@ -203,6 +242,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
+  margin-bottom: 50px;
 }
 
 /*-----------TEAM-----------*/

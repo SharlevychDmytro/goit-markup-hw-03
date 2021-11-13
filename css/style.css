@@ -1,3 +1,4 @@
+/*-----------VARIABLES-----------*/
 :root {
   --accent-logo-color: #2196f3;
   --second-logo-color: #000000;
@@ -12,13 +13,16 @@
   --button-color: #2196f3;
   --button-second-text-color: #ffffff;
   --button-first-text-color: #212121;
-  --background-color: #2f303a;
+  --mine-background-color: #2f303a;
+  --second-background-color: #f5f4fa;
   --card-set-gap: 30px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
+
+/*-----------RESET STYLE-----------*/
 
 p,
 h1,
@@ -44,6 +48,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*-----------SERVICE CLASS-----------*/
 
 .container {
   width: 1200px;
@@ -76,6 +82,10 @@ img {
 /*-----------HEADER-----------*/
 
 .header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header a {
   padding-top: 24px;
   padding-bottom: 25px;
 }
@@ -149,7 +159,7 @@ img {
 /*-----------HERO-----------*/
 
 .hero {
-  background-color: var(--background-color);
+  background-color: var(--mine-background-color);
   padding-top: 200px;
   padding-bottom: 280px;
 }
@@ -178,6 +188,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--button-second-text-color);
   background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
   margin: 0 auto;
@@ -247,13 +258,39 @@ img {
 
 /*-----------TEAM-----------*/
 
+.team {
+  background-color: var(--second-background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-title-color);
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.team-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  background-color: #ffffff;
 }
 
 .team-list-title {
@@ -263,6 +300,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--third-title-color);
+  margin-bottom: 10px;
 }
 
 .team-list-text {
@@ -277,7 +315,7 @@ img {
 /*-----------FOOTER-----------*/
 
 .footer {
-  background-color: var(--background-color);
+  background-color: var(--mine-background-color);
 }
 
 .footer-logo {

@@ -161,7 +161,7 @@ img {
 .hero {
   background-color: var(--mine-background-color);
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -191,6 +191,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
+  padding: 10px 32px;
   margin: 0 auto;
 }
 
@@ -203,10 +204,15 @@ img {
 
 .quality-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.quality-item:not(:last-child) {
-  margin-right: 30px;
+.quality-item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
 }
 
 .quality-title {
